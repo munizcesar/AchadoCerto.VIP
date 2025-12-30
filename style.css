@@ -256,11 +256,11 @@ footer {
 /* ===============================
    MOBILE (TUDO JUNTO)
    =============================== */
-@media (max-width:768px){
+@media(max-width:768px){
 
-    /* Banner fica normal */
     .hero {
-        position: relative;
+        display: flex;
+        flex-direction: column;
     }
 
     .hero-img-desktop { display: none; }
@@ -269,15 +269,17 @@ footer {
     .hero img {
         max-height: 320px;
         border-radius: 0;
-        display: block;
     }
 
-    /* REMOVE overlay no mobile */
+    .hero-img-desktop,
+    .hero-img-mobile {
+        order: 1;
+    }
+
     .cta {
-        position: relative !important;
-        top: auto;
-        left: auto;
-        transform: none !important;
+        order: 2;
+        position: static;
+        transform: none;
         width: 90%;
         margin: 15px auto 0;
         background: rgba(10,16,38,.95);
