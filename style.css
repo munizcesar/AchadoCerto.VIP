@@ -126,7 +126,7 @@ body {
 footer {
     text-align: center;
     padding: 20px;
-    background: linear-gradient(90deg, #0A1026, #292e8b);
+    background: linear-gradient(90deg, #0A1026, #22266d);
     margin-top: 20px;
 }
 
@@ -292,12 +292,14 @@ footer {
     }
 
     .offers-image-container {
-        height: 300px;
+    max-height: 260px;
     }
 
+
     .offers-cta-text h3 {
-        font-size: 26px;
-    }
+    font-size: 22px;
+    }    
+
 
     .offers-cta-text p {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);}
