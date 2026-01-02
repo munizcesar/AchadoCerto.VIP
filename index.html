@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AchadoCerto.VIP — Onde o Premium vira Achado!</title>
+    <title>AchadoCerto.VIP — Onde o Premium vira Achado!</title>
 
-<!-- SEO / SOCIAL -->
-<meta name="description" content="Achados, cupons e ofertas selecionadas com foco em economia real. Canal Oficial e Grupo VIP para quem quer economizar com segurança.">
+    <meta name="description" content="Achados, cupons e ofertas selecionadas com foco em economia real. Canal Oficial e Grupo VIP para quem quer economizar com segurança.">
 
-<meta property="og:title" content="🔍 AchadoCerto.VIP — O Atalho para Ofertas Reais e Economia Inteligente" />
-<meta property="og:description" content="Ofertas verificadas, cupons reais e achados selecionados. Grupo VIP + Canal Oficial para economizar com segurança." />
-<meta property="og:image" content="https://achadocerto.vip/img/og-previa.jpg" />
-<meta property="og:url" content="https://achadocerto.vip/" />
-<meta property="og:type" content="website" />
+    <meta property="og:title" content="🔍 AchadoCerto.VIP — O Atalho para Ofertas Reais" />
+    <meta property="og:description" content="Ofertas verificadas, cupons reais e achados selecionados. Entre no Grupo VIP!" />
+    <meta property="og:image" content="https://achadocerto.vip/img/og-previa.jpg" />
+    <meta property="og:url" content="https://achadocerto.vip/" />
+    <meta property="og:type" content="website" />
+    
+    <meta name="twitter:card" content="summary_large_image">
 
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- ICONES -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preload" as="image" href="images/imagem_celular.png" media="(max-width: 768px)">
 </head>
 
 <body>
@@ -32,30 +30,26 @@
 </header>
 
 <section class="hero">
-    <img src="imagem_desktop.png" alt="Ofertas Premium AchadoCerto VIP" class="hero-img-desktop">
-    <img src="imagem_celular.png" alt="Ofertas Exclusivas AchadoCerto VIP" class="hero-img-mobile">
+    <picture>
+        <source media="(min-width: 769px)" srcset="images/imagem_desktop.png">
+        <img src="images/imagem_celular.png" alt="Ofertas Premium AchadoCerto VIP" class="hero-img">
+    </picture>
 
     <div class="cta">
         <h2>Ofertas selecionadas com foco em economia real</h2>
 
-        <!-- GRUPO -->
-        <a href="https://chat.whatsapp.com/E6kgRRbyoiP99NoIANB81t" target="_blank">
-            <button class="botao">
-                <i class="fab fa-whatsapp"></i> Entrar no Grupo VIP
-            </button>
+        <a href="https://chat.whatsapp.com/E6kgRRbyoiP99NoIANB81t" target="_blank" class="botao">
+            <i class="fab fa-whatsapp"></i> Entrar no Grupo VIP
         </a>
 
-        <!-- CANAL -->
-        <a href="https://whatsapp.com/channel/0029VbC8hocDJ6H0vLWZlm2w" target="_blank">
-            <button class="botao botao-secundario">
-                <i class="fas fa-bullhorn"></i> Seguir Canal Oficial
-            </button>
+        <a href="https://whatsapp.com/channel/0029VbC8hocDJ6H0vLWZlm2w" target="_blank" class="botao botao-secundario">
+            <i class="fas fa-bullhorn"></i> Seguir Canal Oficial
         </a>
 
         <p style="font-size:13px; margin-top:10px; color:#E0E0E0; opacity:0.9;">
-🔒 Selecionamos ofertas reais todos os dias.  
-Atuamos como curadoria: selecionamos ofertas e direcionamos para lojas oficiais.
-</p>
+            🔒 Selecionamos ofertas reais todos os dias. <br>
+            Atuamos como curadoria: selecionamos ofertas e direcionamos para lojas oficiais.
+        </p>
 
     </div>
 </section>
@@ -65,10 +59,14 @@ Atuamos como curadoria: selecionamos ofertas e direcionamos para lojas oficiais.
 
     <p>
         Promoções selecionadas e oportunidades que realmente valem a pena.
-Sem spam. Só achados.
+        Sem spam. Só achados.
     </p>
 
-    <!-- BOX DE OFERTAS (INTACTA) -->
+    <section class="latest-post">
+        <h2>📍 Guia do Achado: Análises & Curiosidades</h2>
+        <div id="latest-post"></div>
+    </section>
+
     <div class="offers-box">
         <a href="https://www.mercadolivre.com.br/social/muc1576372" target="_blank" class="offers-link">
             
@@ -77,8 +75,7 @@ Sem spam. Só achados.
                 <div class="offers-overlay">
                     <div class="offers-cta-text">
                         <h3>🎯OPORTUNIDADES EM DESTAQUE</h3>
-                        <p><p>Clique para ver os achados do dia</p>
-</p>
+                        <p>Clique para ver os achados do dia</p>
                     </div>
                 </div>
             </div>
@@ -110,55 +107,47 @@ Sem spam. Só achados.
                 </div>
             </div>
 
-            <button class="offers-action-button">
+            <div class="offers-action-button">
                 <i class="fas fa-lock" style="color:#0A1026; margin-right:8px;"></i>
                 VER OFERTAS VERIFICADAS
-            </button>
+            </div>
 
         </a>
     </div>
 
 </section>
 
-<section class="trust-extra" style="
-margin:40px auto;
-max-width:900px;
-padding:0 20px;
-text-align:left;
-">
-<h2>Por que confiar no AchadoCerto.VIP?</h2>
+<section class="trust-extra" style="margin:40px auto; max-width:900px; padding:0 20px; text-align:left;">
+    <h2>Por que confiar no AchadoCerto.VIP?</h2>
 
-<ul style="line-height:1.8; font-size:16px;">
-<li>✔️ Selecionamos ofertas reais e cupons válidos</li>
-<li>✔️ O Canal Oficial concentra as principais publicações</li>
-<li>✔️ O Grupo VIP é usado apenas para achados e avisos</li>
-<li>✔️ Não solicitamos pagamentos ou dados pessoais</li>
-<li>✔️ Links direcionam para lojas reconhecidas e oficiais</li>
-</ul>
+    <ul style="line-height:1.8; font-size:16px;">
+        <li>✔️ Selecionamos ofertas reais e cupons válidos</li>
+        <li>✔️ O Canal Oficial concentra as principais publicações</li>
+        <li>✔️ O Grupo VIP é usado apenas para achados e avisos</li>
+        <li>✔️ Não solicitamos pagamentos ou dados pessoais</li>
+        <li>✔️ Links direcionam para lojas reconhecidas e oficiais</li>
+    </ul>
 
-<p style="margin-top:16px; font-size:14px; color:#838383;">
-Transparência, simplicidade e economia — sem pegadinhas.
-</p>
+    <p style="margin-top:16px; font-size:14px; color:#838383;">
+        Transparência, simplicidade e economia — sem pegadinhas.
+    </p>
 </section>
-
 
 <section class="qrcode">
     <h3>Entre pelo QR Code</h3>
-    <img src="qrcode_achado.png" alt="QR Code Grupo AchadoCerto VIP">
+    <img src="images/qrcode_achado.png" alt="QR Code Grupo AchadoCerto VIP" loading="lazy">
 </section>
 
 <footer>
     <p>
-        <a href="politica.html">Política de Privacidade</a> |
-        <a href="termos.html">Termos de Uso</a> |
-        <a href="https://whatsapp.com/channel/0029VbC8hocDJ6H0vLWZlm2w" target="_blank">
-Canal Oficial
-</a>
-
+        <a href="politica.html">Política de Privacidade</a> | 
+        <a href="termos.html">Termos de Uso</a> | 
+        <a href="https://whatsapp.com/channel/0029VbC8hocDJ6H0vLWZlm2w" target="_blank">Canal Oficial</a>
     </p>
     <p>© 2026 AchadoCerto.VIP — Todos os Direitos Reservados</p>
 </footer>
 
+<script src="script.js"></script>
 
 </body>
 </html>
