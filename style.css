@@ -538,37 +538,45 @@ a.post-preview-card:hover {
     border-bottom: 2px solid #FFD700; /* Linha dourada embaixo ao passar o mouse */
 }
 
-/* Estilo Unificado para Botões de Ação do Site */
+/* 1. Estilo base (Como ele nasce) */
 .botao-padrao-achado {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 14px 40px;
     border: 2px solid #FFD700;
-    color: #FFD700;
-    background: transparent;
     text-decoration: none;
     font-weight: 800;
     font-size: 15px;
     text-transform: uppercase;
-    border-radius: 50px; /* Estilo pílula para modernidade */
+    border-radius: 50px;
     transition: all 0.3s ease;
     letter-spacing: 1px;
     cursor: pointer;
     margin-top: 20px;
 }
 
-.botao-padrao-achado:hover {
-    background: #FFD700;
-    color: #0A1026;
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+/* 2. Para aparelhos COM MOUSE (Desktop) */
+/* Ele começa transparente e fica amarelo no hover */
+@media (hover: hover) {
+    .botao-padrao-achado {
+        background: transparent;
+        color: #FFD700;
+    }
+    .botao-padrao-achado:hover {
+        background: #FFD700;
+        color: #0A1026;
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
 }
 
-.botao-padrao-achado i {
-    margin-right: 10px; /* Espaço para o ícone de cadeado ou seta */
-}
-
-html {
-    scroll-behavior: smooth; /* Faz a rolagem deslizar suavemente */
+/* 3. Para aparelhos SEM MOUSE (Celular e Tablet) */
+/* Ele já nasce amarelo e ignoramos o hover */
+@media (hover: none) {
+    .botao-padrao-achado {
+        background: #FFD700;
+        color: #0A1026;
+        width: 100%; /* Melhora o clique no polegar */
+    }
 }
