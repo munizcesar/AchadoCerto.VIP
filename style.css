@@ -13,7 +13,9 @@ html, body {
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Arial é segura e carrega rápido */
+    /* Atualizado para Montserrat, com Arial de reserva */
+    font-family: 'Montserrat', 'Arial', sans-serif; 
+    
     background: #0A1026;
     color: #FFFFFF;
     line-height: 1.5;
@@ -406,7 +408,11 @@ footer a {
     }
 }
 
-/* Container das Prévias na Home */
+/* ===============================
+   LATEST POST & BLOG GRID (ATUALIZADO)
+   =============================== */
+
+/* Container da Home (Um embaixo do outro) */
 #latest-post {
     display: flex;
     flex-direction: column;
@@ -414,64 +420,155 @@ footer a {
     margin-top: 20px;
 }
 
-.post-preview-card {
+/* Container do Blog (Grade Lado a Lado) */
+.grid-blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* O CARD (Agora é um link <a>) */
+a.post-preview-card {
     display: flex;
     background: #151B4A;
     border-radius: 12px;
     overflow: hidden;
-    text-decoration: none;
-    color: white;
+    
+    /* Reset de Link (Essencial para não ficar texto azul) */
+    text-decoration: none; 
+    color: white; 
+    
     border: 1px solid rgba(255,215,0,0.1);
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-.post-preview-card:hover {
+/* Efeito ao passar o mouse */
+a.post-preview-card:hover {
     border-color: #FFD700;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* Imagem do Card */
 .post-image-wrapper {
-    flex: 1; /* Ocupa 40% do espaço no desktop */
+    flex: 1; 
     min-width: 250px;
+    position: relative;
 }
 
 .post-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a foto não estique */
+    display: block;
 }
 
+/* Texto do Card */
 .post-content-wrapper {
-    flex: 1.5; /* Ocupa 60% do espaço no desktop */
-    padding: 20px;
+    flex: 1.5; 
+    padding: 25px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .post-content-wrapper h3 {
     color: #FFD700;
     margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.post-content-wrapper p {
+    color: #E0E0E0;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 
 .post-btn {
     display: inline-block;
-    margin-top: 15px;
-    color: #00D4FF;
+    color: #00D4FF; /* Azul Cyan neon */
     font-weight: bold;
     font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* RESPONSIVIDADE MOBILE (O Pulo do Gato) */
+/* RESPONSIVIDADE (Celular) */
 @media (max-width: 768px) {
-    .post-preview-card {
-        flex-direction: column; /* Imagem em cima, texto embaixo */
+    a.post-preview-card {
+        flex-direction: column; /* Foto em cima, texto embaixo */
     }
     
     .post-image-wrapper {
-        height: 200px; /* Altura fixa para as fotos na vitrine mobile */
+        height: 200px; 
         min-width: 100%;
     }
-    
-    .post-content-wrapper h3 {
-        font-size: 18px;
+
+    .post-content-wrapper {
+        padding: 20px;
     }
+}
+
+/* Estilização do Menu de Navegação */
+.menu-navegacao {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espaço elegante entre os links */
+    padding-bottom: 10px;
+}
+
+.menu-navegacao a {
+    color: #FFD700; /* Dourado Premium */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-navegacao a:hover {
+    color: #FFFFFF; /* Branco ao passar o mouse */
+    border-bottom: 2px solid #FFD700; /* Linha dourada embaixo ao passar o mouse */
+}
+
+/* Estilo Unificado para Botões de Ação do Site */
+.botao-padrao-achado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 40px;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 50px; /* Estilo pílula para modernidade */
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.botao-padrao-achado:hover {
+    background: #FFD700;
+    color: #0A1026;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.botao-padrao-achado i {
+    margin-right: 10px; /* Espaço para o ícone de cadeado ou seta */
+}
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem deslizar suavemente */
 }
