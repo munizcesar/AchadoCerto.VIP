@@ -580,3 +580,10 @@ a.post-preview-card:hover {
         width: 100%; /* Melhora o clique no polegar */
     }
 }
+
+/* Espaçamento entre ícone e texto no botão padrão */
+.botao-padrao-achado .fa-lock,
+.botao-padrao-achado i.fas {
+    margin-right: 8px;
+    display: inline-block;
+}
